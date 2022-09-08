@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>CKS Glossary</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- bootstrap link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+        <link rel="stylesheet" href="css/indexs.css">
+    </head>
+    <script>
+        $(document).ready(function(){
+            $('.spinner').fadeOut();
+            $('.fluid-container').css('display', 'block');
+            $('.container-s').hide();
+            $("#search-bar").keyup(function(e) {
+                $('.container-s').hide();
+                $("#card").html("");
+                var search_query = $(this).val();
+                if (search_query != "") {
+                    $.ajax({
+                        url: "search.php",
+                        type: "POST",
+                        data: {
+                            search: search_query
+                        },
+                        success: function($data) {
+                            $("#list").fadeIn('fast').html($data);
+                        }
+                    });
+                } else {
+                    $("#list").fadeOut();
+                }
+            });
+
+            $(document).on("click", "#list li", function() {
+                $("#search-bar").val($(this).text());
+                $("#list").fadeOut();
+            });
+
+            $("#submit").on("click", function(e) {
+                e.preventDefault();
+                $('.spinner').show();
+                $('#list').hide();
+                $(".container-s").fadeIn();
+               
+                $("#card").html("");
+                var search_query = $('#search-bar').val();
+            
+                $.ajax({
+                    url: "postsearch.php",
+                    type: "POST",
+                    data: {
+                        search: search_query
+                    },
+                    success: function($data) {
+                        $('.spinner').fadeOut('fast');
+                        $("#card").fadeIn('fast').html($data);
+                        
+                    }
+                });
+                $("#search-bar").val("");
+            });
+
+            $('#contribute-link').click(function(){
+                $('.header').css("filter","blur(2px)");
+            });
+
+            
+            $('#header-search input').on('keyup', function() {
+                let empty = false;
+
+                $('#header-search input').each(function() {
+                empty = $(this).val().length == 0;
+                });
+
+                if (empty)
+                $('#submit').attr('disabled', 'disabled');
+                else
+                $('#submit').attr('disabled', false);
+            });
+        });
+    </script>
+    <body >
+        <div class="fluid-container header">
+            <div class="header-container">
+                <p>Center for Kapampangan Studies</p>
+                <h4>English to Kapampangan Glossary</h4>
+            </div>
+        </div>
+        <div class="fluid-container">
+            <div class="header-search">
+                <h5>Search Word</h5>
+                <div class="input-group mb-3" id="header-search" style='display: flex;'>
+                    <input autocomplete="off" id='search-bar' name="search" type="text" class="form-control" placeholder="Enter word" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="submit" id="submit" disabled>Search</button>
+                    </div>
+                </div>
+            </div>
+            <div id="list"></div>
+        </div>
+        <div class="fluid-container searched-container">
+            <div class="col-6 container-s">
+                <div id="card"></div>
+            </div>
+        </div>
+        <div class="text-center spinner">
+            <div class="spinner-border" role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+    </body>
+    
+</html>
