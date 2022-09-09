@@ -1,0 +1,194 @@
+body{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    background-color: #E1E8EB;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-section{
+    display: flex;
+    height: 100%;
+    width: 15%;
+    left: 0;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, #83BD75 , #557B83);
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);}
+
+.upper-left a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.upper-left{
+    padding: 20px;
+}
+
+.upper-left .header-h3{
+    font-size: 0.85vw;
+}
+
+.upper-left .header-logo{
+    width: 3.5vw;
+}
+
+.upper-mid nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-mid nav a{
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 0.8vw;
+    width: 95%;
+    margin: auto;
+}
+
+.upper-bottom #logout{
+    background-color: white;
+    color: #222222;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.1s ease-out;
+    text-decoration: none;
+}
+
+.upper-bottom #logout:hover{
+    background-color: #222222;
+    color: white;
+    transition: 0.15s ease-in;
+    font-weight: 500;
+}
+
+.upper-bottom{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+}
+
+
+#odd:hover, #even:hover{
+    /* background-color: #AAAAAA; */
+    background-color: #E1E8EB;
+    color: #222222;
+    border-radius: 10px;
+    transition: 0.15s ease-in;
+}
+
+/* #odd{
+    background-color: #D4D7DD;
+}
+
+#even{
+    background-color: white;
+} */
+
+.right-section{
+    padding: 50px;
+    width: 85%;
+    margin-left: 15%;
+}
+
+.right-section h3{
+    font-size: 2em;
+}
+
+.container{
+    width: 24%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: white;
+    color: #222222;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.container h4{
+    font-size: 0.85vw;
+}
+
+.top-part{  
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview-container{
+    margin-top: 20px;
+    display: flex;
+    gap: 1%;
+    width: 100%;
+}
+.hole {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: #fff;
+  }
+   
+  /* (B2) "CONVERT PIE TO DONUT" - CENTER SMALLER CIRCLE */
+  .donut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg-success{
+    background-color: #83BD75;
+  }
+
+  .bg-primary{
+    background-color: #83BD75;
+  }
+
+  .mid-overview-container{
+    width: 100%;
+    display: flex;
+    gap: 1%;
+    margin-top: 20px;
+  }
+
+  .mid-right, .mid-left{
+    width: 50%;
+  }
+
+  .mid-left{
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: #222222;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .mid-left-upper{
+    display: flex;
+    gap: 10%;
+  }
+
+
+  .mid-right{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: #222222;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .link{
+    color: #222222;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
