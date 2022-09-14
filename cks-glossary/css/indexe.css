@@ -1,0 +1,389 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+body{
+    /* background-color: #fbfff9; */
+    position: relative;
+    z-index: 0;
+}
+
+.header-container{
+    text-align: center;
+    /* background-image: linear-gradient(to bottom, #83BD75 , #557B83); */
+    /* background-image: linear-gradient(#8E9775, #8E9775), url("/assets/kulitan-2.png"); */
+    color: white;
+}
+
+.header{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #198754;
+    /* border-top: #198754 4px solid;
+    border-bottom: #198754 4px solid; */
+    /* #198754 */
+    /* #009603 */
+    margin-top: 4%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    
+}
+
+.header-search{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+#list li:hover{
+    cursor: pointer;
+}
+
+#list{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-s{
+    width: 25%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    /* border: 1px solid #222222; */
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#card a{
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease;
+    color: #0d6efd;
+}
+
+/* #card a:hover{
+    color: #009603;
+    transition: 0.1s ease;
+} */
+
+#search-bar{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+#search-bar:focus {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+
+.container-s h3{
+    margin-top: 20px;
+}
+.spinner{
+    margin-top: 100px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-40%);
+}
+.comment-modal{
+    width: 40%;
+    position: absolute;
+    padding: 30px 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+
+
+.custom-modal{
+    width: 40%;
+    position: absolute;
+    padding: 30px 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+
+.custom-modal-2{
+    width: 40%;
+    position: absolute;
+    padding: 30px 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+
+.custom-modal h5{
+    margin-bottom: 20px;
+}
+
+.custom-modal button{
+    margin-top: 20px;
+}
+
+.custom-modal .card-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-modal-2 h5{
+    margin-bottom: 20px;
+}
+
+.custom-modal-2 button{
+    margin-top: 20px;
+}
+
+.custom-modal-2 .card-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-head svg:hover{
+    cursor: pointer;
+}
+
+.contribute-modal{
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.contribute-modal-2{
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.success-message, .error-message{
+    width: 30%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    padding: 50px 30px;
+    border-radius: 10px;
+}
+
+.delayed-modal{
+    width: 20%;
+    position: absolute;
+    bottom: 0%;
+    right: 1%;
+    z-index: 1;
+}
+.card-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#close:hover{
+    cursor: pointer;
+}
+
+.about-us{
+    width: 40%;
+    position: absolute;
+    padding: 30px 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+
+#close-about:hover{
+    cursor: pointer;
+}
+
+.fluid-container{
+    display: none;
+    transition: 0.3s ease;
+}
+
+.the-team{
+    text-align: center;
+}
+
+.the-team h5{
+    margin-bottom: 15px;
+}
+
+.the-team button{
+    width: 40%;
+    margin: 10px auto;
+}
+
+@media screen and (max-width: 1600px) {
+    .header{
+        width: 40%;
+    }
+
+    .header-search{
+        width: 35%;
+        margin-top: 40px;
+    }
+
+    #list{
+        width: 35%;
+    }
+    .container-s{
+        width: 35%;
+    }
+
+    .custom-modal{
+        width: 50%;
+    }
+    
+    .custom-modal-2{
+        width: 50%;
+    }
+
+    
+    .success-message, .error-message{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header{
+        width: 80%;
+    }
+
+    .header-search{
+        width: 60%;
+        margin-top: 40px;
+    }
+
+    #list{
+        width: 60%;
+    }
+    .container-s{
+        width: 60%;
+    }
+
+    .custom-modal{
+        width: 70%;
+    }
+    
+    .custom-modal-2{
+        width: 70%;
+    }
+
+    .contribute-modal{
+        width: 70%;
+    }
+
+    .contribute-modal-2{
+        width: 70%;
+
+    }
+
+    .comment-modal{
+        width: 70%;
+    }
+    
+    .success-message, .error-message{
+        width: 60%;
+    }
+
+    .delayed-modal{
+        width: 40%;
+    }
+
+    .about-us{
+        width: 90%;
+    }
+
+    /* .name-row{
+        flex-direction: column;
+    } */
+}
+
+@media screen and (max-device-width: 600px) {
+    .header{
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .header-search{
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    #list{
+        width: 90%;
+    }
+    .container-s{
+        width: 90%;
+    }
+
+    .custom-modal{
+        width: 90%;
+        height: 70%;
+    }
+    
+    .custom-modal-2{
+        width: 90%;
+        height: 70%;
+    }
+
+    .privacy-text{
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    
+    .contribute-modal{
+        width: 90%;
+    }
+
+    .contribute-modal-2{
+        width: 90%;
+
+    }
+
+    .success-message, .error-message{
+        width: 80%;
+    }
+
+    .delayed-modal{
+        width: 100%;
+        bottom: -3%;
+        right: 0%;
+        z-index: 1;
+    }
+
+    .comment-modal{
+        width: 90%;
+    }
+
+    .about-us{
+        width: 90%;
+    }
+
+    .name-row{
+        flex-direction: column;
+    }
+}
