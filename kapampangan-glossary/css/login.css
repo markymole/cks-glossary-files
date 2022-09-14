@@ -1,0 +1,122 @@
+body, html{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E1E8EB;
+}
+.header-container{
+    width: 30vw;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding-bottom: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-logo{
+    width: 5vw;
+}
+
+.header-toppart{
+    text-align: center;
+    color: white;
+    /* background-color: #178C05; */
+    background-image: linear-gradient(to right, #83BD75 , #557B83);
+    padding-top: 30px;
+    padding-bottom: 1px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.header-toppart p{
+    font-style: italic;
+    font-size: 0.8vw;
+}
+
+.header-toppart h3{
+    font-size: 1vw;
+    margin-top: 5px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.header-form p{
+    font-size: 1.6vw;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.header-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.header-form b{
+    font-family: 'Poppins', sans-serif;
+    width: 60%;
+    font-size: 0.7vw;
+    margin: auto;
+}
+
+.header-form input{
+    height: 85%;
+    width: 100%;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input{
+    height: 30px;
+    border: 0.5px solid #333333;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    border-radius: 5px;
+}
+.input svg{
+    margin-left: 5px;
+    border: none;
+}
+
+.header-form .input input:focus {
+    background-color: lightgray;
+}
+
+.header-form .button-submit{
+    width: 60%;
+    margin: auto;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: #146356;
+    border: none;   
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.header-form .button-submit:hover{
+    transform: scale(0.95);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* .header-form .button-submit{
+    width: 25%;
+    background-color: #710E1D;
+    color: white;
+    padding: 5px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+} */
+
+/* font-family: 'Cormorant SC', serif; */
