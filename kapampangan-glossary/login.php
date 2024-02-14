@@ -20,8 +20,8 @@
         $count = $row['count'];
         if($count == 0)
         {
-            $default_admin_username = 'admin';
-            $default_admin_password = 'admin';
+            $default_admin_username = '';
+            $default_admin_password = '';
             $query = "INSERT INTO tbl_admin(username, password) VALUES('$default_admin_username', '".md5($default_admin_password)."')";
             $res = mysqli_query($connection, $query);
         }
